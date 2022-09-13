@@ -20,7 +20,4 @@ python3 -m pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
 python3 -m pip install -e .
 pip install --upgrade packaging
 
-#python scripts/txt2img.py --prompt "a photograph of a computer chip" --plms && scp -P 2222 outputs/txt2img-samples/samples/* ammar@ammar.gr:/home/ammar/public_html/stable-diffusion/outputs/txt2img-samples/samples
-
-
 exit 0
