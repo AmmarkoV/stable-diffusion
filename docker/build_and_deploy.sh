@@ -24,6 +24,7 @@ docker build \
 docker run -d \
 	--gpus all \
 	--shm-size 8G \
+    -p 8080:8080 \
 	-it \
 	--name $NAME-container \
 	-v $mount_pth:/home/user/workspace \
