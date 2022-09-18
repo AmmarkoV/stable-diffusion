@@ -5,8 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
 
 
-ps_out=`ps -ef | grep tex2img.sh | grep -v 'grep' | grep -v tex2img.sh`
-result=$(echo $ps_out | grep "$1")
+result=`ps -ef | grep tex2img.sh`
 if [[ "$result" != "" ]];then
     echo "Running"
     exit 0
