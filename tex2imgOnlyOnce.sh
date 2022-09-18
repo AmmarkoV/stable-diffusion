@@ -6,12 +6,13 @@ cd "$DIR"
 
 
 result=`ps -ef | grep tex2img.sh`
-if [[ "$result" != "" ]];then
-    echo "Running"
-    exit 1
-else
+if [ -z "$result" ]; 
+then
     echo "Not Running"
     ./tex2img.sh "$@"
+else
+    echo "Already Running ($result)"
+    exit 1
 fi  
 
 exit 0
