@@ -7,7 +7,7 @@ cd "$DIR"
 rm outputs/txt2img-samples/samples/*.png
 
 SEED=`date +%s`
-python scripts/txt2img.py --prompt "$@" --n_samples 4 --seed $SEED --plms
+python scripts/txt2img.py --prompt "$@" --n_samples 3 --seed $SEED --plms
 echo "QUERY($@) SEED($SEED)" >> log.txt
 
 exit 0
