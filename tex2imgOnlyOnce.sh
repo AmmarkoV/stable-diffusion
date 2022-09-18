@@ -8,7 +8,7 @@ cd "$DIR"
 result=`ps -ef | grep tex2img.sh`
 if [[ "$result" != "" ]];then
     echo "Running"
-    exit 0
+    exit 1
 else
     echo "Not Running"
     ./tex2img.sh "$@"
