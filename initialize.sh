@@ -20,4 +20,22 @@ python3 -m pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
 python3 -m pip install -e .
 pip install --upgrade packaging
 
+
+
+cd "$DIR"
+if [ -f AmmarServer/README.md ]
+then
+echo "AmmarServer appears to already exist .."
+else
+      git clone https://github.com/AmmarkoV/AmmarServer
+      AmmarServer/scripts/get_dependencies.sh
+      cd AmmarServer
+      mkdir build
+      cd build
+      cmake ..
+      make 
+      cd "$DIR"
+fi
+
+
 exit 0
