@@ -38,4 +38,13 @@ else
 fi
 
 
+if [ -f models/ldm/text2img-large/model.ckpt ]
+then
+echo "LAION400m model appears to already exist .."
+else
+mkdir -p models/ldm/text2img-large/
+wget -O models/ldm/text2img-large/model.ckpt https://ommer-lab.com/files/latent-diffusion/nitro/txt2img-f8-large/model.ckpt
+fi
+
+
 exit 0
