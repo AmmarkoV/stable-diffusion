@@ -38,6 +38,8 @@ else
 fi
 
 
+curl https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media > sd-v1-4.ckpt
+
 if [ -f models/ldm/text2img-large/model.ckpt ]
 then
 echo "LAION400m model appears to already exist .."
