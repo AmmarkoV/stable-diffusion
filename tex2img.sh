@@ -1,14 +1,24 @@
 #!/bin/bash
 
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
  
-rm outputs/txt2img-samples/samples/*.png
-
 SEED=`date +%s`
-python scripts/txt2img.py --prompt "$@" --n_samples 2 --seed $SEED --plms --n_iter 6
-echo "QUERY($@) SEED($SEED)" >> log.txt
+
+isHQ=`echo "$@" | grep 'high quality'`
+echo "QUERY($@) SEED($SEED) HQ($isHQ)" >> log.txt
+
+if [ -z "$isHQ" ]; 
+then
+ rm outputs/txt2img-samples/samples/*.png
+ python scripts/txt2img.py --prompt "$@" --n_samples 2 --seed $SEED --plms --n_iter 6
+else
+ rm outputs/txt2img-samples/samples/*.png
+ rm outputs/txt2img-samples-laion400m/samples/*.png
+ python scripts/txt2img.py --prompt "$@" --n_samples 2 --seed $SEED --plms --n_iter 50 --laion400m 
+ mv outputs/txt2img-samples-laion400m/samples/*.png outputs/txt2img-samples/samples/
+fi  
+
 
 exit 0
 
