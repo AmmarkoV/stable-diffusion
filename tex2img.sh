@@ -5,7 +5,7 @@ cd "$DIR"
  
 SEED=`date +%s`
 
-isHQ=`echo "$@" | grep 'high quality'`
+isHQ=`echo "$@" | grep 'laion400m'`
 echo "QUERY($@) SEED($SEED) HQ($isHQ)" >> log.txt
 
 if [ -z "$isHQ" ]; 
