@@ -8,6 +8,7 @@ REPOSITORY=`pwd`
 
 cd "$DIR"
 
+
 NAME="stable-diffusion"
 dockerfile_pth="$DIR"
 mount_pth="$REPOSITORY"
