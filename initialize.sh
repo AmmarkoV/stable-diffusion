@@ -28,7 +28,7 @@ then
 echo "AmmarServer appears to already exist .."
 else
       git clone https://github.com/AmmarkoV/AmmarServer
-      AmmarServer/scripts/get_dependencies.sh
+      sudo AmmarServer/scripts/get_dependencies.sh
       cd AmmarServer
       mkdir build
       cd build
