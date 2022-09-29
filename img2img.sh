@@ -12,13 +12,13 @@ if [ -z "$isHQ" ];
 then
  rm outputs/txt2img-samples/samples/*.png
  rm outputs/img2img-samples/samples/*.png
- python scripts/img2img.py --prompt "$@" --init-img upimage.jpg --strength 0.3 --n_samples 2 --seed $SEED --ddim_steps 100
+ python scripts/img2img.py --prompt "$@" --init-img upimage.jpg --strength 0.5 --n_samples 4 --seed $SEED --ddim_steps 100
  mv outputs/img2img-samples/samples/*.png outputs/txt2img-samples/samples/
 else
  rm outputs/txt2img-samples/samples/*.png
  rm outputs/img2img-samples/samples/*.png
  rm outputs/img2img-samples-laion400m/samples/*.png
- python scripts/img2img.py --prompt "$@" --init-img upimage.jpg --n_samples 2 --seed $SEED --ddim_steps 100 --laion400m 
+ python scripts/img2img.py --prompt "$@" --init-img upimage.jpg --strength 0.5 --n_samples 4 --seed $SEED --ddim_steps 100 --laion400m 
  mv outputs/img2img-samples-laion400m/samples/*.png outputs/txt2img-samples/samples/
 fi  
 
