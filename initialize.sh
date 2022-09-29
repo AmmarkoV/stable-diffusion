@@ -23,6 +23,8 @@ pip install --upgrade packaging
 
 
 cd "$DIR"
+mkdir uploads
+
 if [ -f AmmarServer/README.md ]
 then
 echo "AmmarServer appears to already exist .."
