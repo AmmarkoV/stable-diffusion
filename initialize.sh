@@ -32,6 +32,7 @@ else
       git clone https://github.com/AmmarkoV/AmmarServer
       sudo AmmarServer/scripts/get_dependencies.sh
       cd AmmarServer
+      mkdir -p public_html/uploads
       mkdir build
       cd build
       cmake ..
