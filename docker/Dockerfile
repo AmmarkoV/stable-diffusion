@@ -19,6 +19,7 @@ RUN \
 			sudo \
 			wget \
 			nano \
+            imagemagick \
             python3.8-venv \
 	&& echo "**** python pip update ****" \
 		&& /usr/bin/python3 -m pip install --upgrade pip \
