@@ -37,6 +37,8 @@ RUN \
 		&& mkdir /home/${user_name}/workspace/ \
         && chown -R user:user /home/${user_name}/workspace
 
+#Fix Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 34: CUDA driver is a stub library
+RUN rm -rf /usr/local/cuda/lib64/stubs
 
 USER ${user_name} 
 WORKDIR /home/${user_name}/
