@@ -5,7 +5,7 @@ cd "$DIR"
 
 ORIG_DIR=`pwd`
 
-sudo apt install libkrb5-dev libpq-dev
+sudo apt install libkrb5-dev libpq-dev imagemagick
 
 
 python3 -m venv stablevenv
@@ -33,10 +33,13 @@ else
       sudo AmmarServer/scripts/get_dependencies.sh
       cd AmmarServer
       mkdir -p public_html/uploads
+      chmod 777 public_html/uploads
       cd public_html
       ln -s ../../outputs/txt2img-samples/
       ln -s ../../outputs/img2img-samples/
       ln -s ../../log.txt
+      ln -s ../../upimage.jpg
+      chmod 777 ../../upimage.jpg
       cd ..
       mkdir build
       cd build
