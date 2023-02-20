@@ -8,6 +8,21 @@ SEED=`date +%s`
 isHQ=`echo "$2" | grep 'laion400m'`
 echo "QUERY($2) SEED($SEED) HQ($isHQ)" >> log.txt
 
+
+echo " * "
+echo " * "
+echo " * "
+echo " * "
+echo " * "
+echo " ************ $2 ************  "
+echo " * "
+echo " * "
+echo " * "
+echo " * "
+echo " * "
+
+
+
 if [ -z "$isHQ" ]; 
 then
  rm outputs/txt2img-samples/samples/*.png
