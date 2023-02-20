@@ -11,7 +11,7 @@ result=$(echo $ps_out | grep "tex2img.sh")
 if [ -z "$result" ]; 
 then
     echo "Not Running"
-    ./img2img.sh "$1" "$2"
+    ./img2img.sh "$1" "$2" "$3"
 else
     echo "Already Running ($result)"
     exit 1
