@@ -5,7 +5,7 @@ cd "$DIR"
 
 ORIG_DIR=`pwd`
 
-sudo apt install libkrb5-dev libpq-dev imagemagick
+sudo apt install libkrb5-dev libpq-dev imagemagick ffmpeg libsm6 libxext6 -y
 
 
 python3 -m venv stablevenv
