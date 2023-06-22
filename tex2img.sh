@@ -5,14 +5,13 @@ cd "$DIR"
  
 #SEED=`date +%s`
 
-isHQ=`echo "$2" | grep 'laion400m'`
-echo "QUERY($2) SEED($SEED) HQ($isHQ)" >> log.txt
-
 STRENGTH="$1"
 STEPS="$2"
 PROMPT="$3"
 SEED="$4"
 
+isHQ=`echo "$2" | grep 'laion400m'` 
+echo "TXT2IMG QUERY($PROMPT) SEED($SEED) STEPS($STEPS) STRENGTH($STRENGTH) HQ($isHQ)" >> log.txt
 
 echo " * "
 echo " * "
