@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
  
-SEED=`date +%s`
+#SEED=`date +%s`
 
 isHQ=`echo "$2" | grep 'laion400m'`
 echo "QUERY($2) SEED($SEED) HQ($isHQ)" >> log.txt
@@ -11,6 +11,7 @@ echo "QUERY($2) SEED($SEED) HQ($isHQ)" >> log.txt
 STRENGTH="$1"
 STEPS="$2"
 PROMPT="$3"
+SEED="$4"
 
 echo " * "
 echo " * "
@@ -19,7 +20,7 @@ echo " * "
 echo " * "
 echo " ************ $PROMPT ************  "
 echo " * "
-echo " STRENGTH = $STRENGTH  / STEPS = $STEPS "
+echo " STRENGTH = $STRENGTH  / STEPS = $STEPS  / SEED = $SEED"
 echo " * "
 echo " * "
 echo " * "
