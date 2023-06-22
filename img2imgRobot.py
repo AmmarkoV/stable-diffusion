@@ -14,7 +14,7 @@ try:
             print(line.strip())  # Print each line after removing leading/trailing whitespace
             unix_time = int(time.time())
             print(unix_time)
-            os.system("./img2img.sh  %s %s %s %lu"%(strength,steps,line.strip(),unix_time))
+            os.system("./img2img.sh  \"%s\" \"%s\" \"%s\" \"%lu\""%(strength,steps,line.strip(),unix_time))
 
 except FileNotFoundError:
     print("File not found.")
