@@ -20,8 +20,8 @@ try:
             print(unix_time)
             os.system("./img2img.sh  \"%s\" \"%s\" \"%s\" \"%lu\""%(strength,steps,line.strip(),unix_time))
             os.system("mkdir -p  ./robotDataset/%u "%(i))
-            os.system("cp outputs/img2img-samples/samples/*.png ./robotDataset/%u "%(i))
-            os.system("echo \"%lu\" > ./robotDataset/%u "%(unix_time,i))
+            os.system("cp outputs/img2img-samples/samples/*.png ./robotDataset/%u/ "%(i))
+            os.system("echo \"%lu\" > ./robotDataset/%u/seed.txt "%(unix_time,i))
             i = i + 1
     #-------------------------------------------------------------------
     os.system("tar cvfjh \"robotDataset.tar.bz2\" ./robotDataset/*")
