@@ -29,6 +29,7 @@ try:
             i = i + 1
     #-------------------------------------------------------------------
     os.system("tar cvfjh \"robotDataset.tar.bz2\" ./robotDataset/*")
+    os.system("zip \"robotDataset.zip\" ./robotDataset/*/*")
 
 except FileNotFoundError:
     print("File not found.")
