@@ -20,7 +20,7 @@ RUN \
 			wget \
 			nano \
             imagemagick \
-            python3.8-venv \
+            python3-venv \
 	&& echo "**** python pip update ****" \
 		&& /usr/bin/python3 -m pip install --upgrade pip \
 	&& echo "**** aliases for l and ll commands creation ****" \
